@@ -145,8 +145,8 @@ void SystemClock_Config(void)
 /* USER CODE BEGIN 4 */
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 	if(TIM2 == htim -> Instance){
-		if(num >0x80)
-			num = 1;
+		
+		num>0x80?num=1:0;
 		
 		HAL_GPIO_WritePin(GPIOE,0xff,1);
 		HAL_GPIO_WritePin(GPIOE,num,0);
