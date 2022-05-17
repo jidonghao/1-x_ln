@@ -150,8 +150,8 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 		num >>= 1;
 		if(num ==0 )
 			num = 0x80;
-		HAL_GPIO_WritePin(GPIOE,0xff,GPIO_PIN_SET);
-		HAL_GPIO_WritePin(GPIOE,num,GPIO_PIN_RESET);
+		HAL_GPIO_WritePin(GPIOE,0xff,1);
+		HAL_GPIO_WritePin(GPIOE,num,0);
 	}
 }
 /* USER CODE END 4 */
