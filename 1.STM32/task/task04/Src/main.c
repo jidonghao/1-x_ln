@@ -47,9 +47,18 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-uint8_t keydown_flag = 0;
-uint16_t pwm_value = 0;
-uint8_t up_down_flag = 0;
+#include "string.h"
+#define cc const char
+cc stringMode1[8] = "mode_1#";
+cc stringMode2[8] = "mode_2#";
+cc stringStop[8] = "stop#";
+
+int8_t ledMode = -1;
+uint16_t LED_value = 0;
+uint8_t uart1RxState = 0;
+uint8_t uart1RxCounter = 0;
+uint8_t uart1RxBuff[128] = {0};
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -95,7 +104,7 @@ int main(void)
   MX_TIM6_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
-	HAL_TIM_PWM_Start(&htim4,TIM_CHANNEL_3);
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -103,7 +112,9 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-
+if(uart1RxState==1){
+	//--------------------------------------------------------------
+}
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
@@ -147,9 +158,21 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
-void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){
-	if()
+
+void USER_UART_IRAHander(){
+	if(__HAL_UART_GET_FLAG(&huart1,UART_FLAG_RXNE)!=RESET){
+		__HAL_UART_ENABLE_IT(&huart1,UART_IT_IDLE);
+		uart1RxBuff[uart1RxCounter] = (uint8_t)(huart1.Instance->DR&(uint8_t)0x00ff);
+		uart1RxCounter++;
+		__HAL_UART_CLEAR_FLAG(&huart1,UART_FLAG_RXNE);
+	}
+	
+	if(__HAL_UART_GET_FLAG(&huart1,UART_FLAG_IDLE)!=RESET){
+		__HAL_UART_DISABLE_IT(&huart1,UART_IT_IDLE);
+		uartRxState = 1;
+	}
 }
+
 /* USER CODE END 4 */
 
 /**
