@@ -29,4 +29,6 @@ task04\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 task04\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
 task04\main.o: ../Inc/tim.h
 task04\main.o: ../Inc/usart.h
+task04\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 task04\main.o: ../Inc/gpio.h
+task04\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
