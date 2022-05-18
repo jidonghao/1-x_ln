@@ -101,10 +101,11 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
-  MX_TIM6_Init();
+ // MX_TIM6_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
-
+__HAL_UART_ENABLE_IT(&huart1,UART_IT_RXNE);
+printf("hello word.\r\n");
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -113,7 +114,42 @@ int main(void)
   {
     /* USER CODE END WHILE */
 if(uart1RxState==1){
-	//--------------------------------------------------------------
+	if(strstr((const char *)uart1RxBuff,stringMode1)!=NULL){
+		printf("现在是mode_1!\r\n");
+		ledMode = 1;
+		LED_value = 0x80;
+	}else if(strstr((const char *)uart1RxBuff,stringMode2)!=NULL){
+		printf("现在是mode_2!\r\n");
+		ledMode=2;
+		LED_value = 0x01;
+	}else if(strstr((const char *)uart1RxBuff,stringStop)!=NULL){
+		printf("现在停了！\r\n");
+		ledMode = 0;
+		LED_value = 0;
+	}
+	uart1RxState = 0;
+	uart1RxCounter = 0;
+	memset(uart1RxBuff,0,128);
+}
+
+HAL_GPIO_WritePin(GPIOE,0xff,1);
+HAL_GPIO_WritePin(GPIOE,LED_value,0);
+HAL_Delay(1000);
+
+switch(ledMode){
+	case 1:
+		LED_value >>= 1;
+		if(LED_value==0)
+			LED_value = 0x80;
+		break;
+	case 2:
+		LED_value <<= 1;
+		if(LED_value==0x100)
+			LED_value = 0x01;
+		break;
+	case 3:
+		LED_value = 0;
+	break;
 }
     /* USER CODE BEGIN 3 */
   }
@@ -159,7 +195,7 @@ void SystemClock_Config(void)
 
 /* USER CODE BEGIN 4 */
 
-void USER_UART_IRAHander(){
+void USER_UART_IRQHandler(){
 	if(__HAL_UART_GET_FLAG(&huart1,UART_FLAG_RXNE)!=RESET){
 		__HAL_UART_ENABLE_IT(&huart1,UART_IT_IDLE);
 		uart1RxBuff[uart1RxCounter] = (uint8_t)(huart1.Instance->DR&(uint8_t)0x00ff);
@@ -169,7 +205,7 @@ void USER_UART_IRAHander(){
 	
 	if(__HAL_UART_GET_FLAG(&huart1,UART_FLAG_IDLE)!=RESET){
 		__HAL_UART_DISABLE_IT(&huart1,UART_IT_IDLE);
-		uartRxState = 1;
+		uart1RxState = 1;
 	}
 }
 
