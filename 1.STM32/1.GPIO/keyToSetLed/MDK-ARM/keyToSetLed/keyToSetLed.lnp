@@ -1,0 +1,24 @@
+--cpu Cortex-M3
+"keytosetled\startup_stm32f103xe.o"
+"keytosetled\main.o"
+"keytosetled\gpio.o"
+"keytosetled\stm32f1xx_it.o"
+"keytosetled\stm32f1xx_hal_msp.o"
+"keytosetled\stm32f1xx_hal_gpio_ex.o"
+"keytosetled\stm32f1xx_hal_tim.o"
+"keytosetled\stm32f1xx_hal_tim_ex.o"
+"keytosetled\stm32f1xx_hal.o"
+"keytosetled\stm32f1xx_hal_rcc.o"
+"keytosetled\stm32f1xx_hal_rcc_ex.o"
+"keytosetled\stm32f1xx_hal_gpio.o"
+"keytosetled\stm32f1xx_hal_dma.o"
+"keytosetled\stm32f1xx_hal_cortex.o"
+"keytosetled\stm32f1xx_hal_pwr.o"
+"keytosetled\stm32f1xx_hal_flash.o"
+"keytosetled\stm32f1xx_hal_flash_ex.o"
+"keytosetled\stm32f1xx_hal_exti.o"
+"keytosetled\system_stm32f1xx.o"
+--library_type=microlib --strict --scatter "keyToSetLed\keyToSetLed.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "keyToSetLed.map" -o keyToSetLed\keyToSetLed.axf
