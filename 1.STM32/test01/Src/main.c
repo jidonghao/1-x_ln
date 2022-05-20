@@ -115,7 +115,7 @@ printf("程序开始运行!\r\n");
 		HAL_ADC_PollForConversion(&hadc1,100);
 		adc_value = HAL_ADC_GetValue(&hadc1);
 		voltage = (float)adc_value/4096*3.3;
-		sprintf(voltString,"采集到的光照数据为: %f V",voltage);
+		sprintf(voltString,"采集到的光照数据为: %.2f V",voltage);
 		printf("%s\r\n",voltString);
 		HAL_Delay(2000);
 		
