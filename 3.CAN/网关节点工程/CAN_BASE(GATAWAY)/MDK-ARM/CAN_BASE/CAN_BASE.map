@@ -2649,39 +2649,39 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-       720         34          0          0          0       5441   hal_i2c.o
-        68         14          0          0          0       1260   infraredsensor.o
-      1114        268          0         24        280     521368   main.o
-       388         32        178          0        512       3277   process_m3.o
-      1352        130        256          0          0       7574   sht1x.o
-       774         42          0          1          0      11160   sht3x.o
-        36          8        304          0       4096        784   startup_stm32f103xe.o
-       164         28          0         12          0       6361   stm32f1xx_hal.o
-      1282         58          0          0          0       7103   stm32f1xx_hal_adc.o
-      1408          0          0          0          0      12204   stm32f1xx_hal_can.o
-       198         14          0          0          0      28851   stm32f1xx_hal_cortex.o
-       304          8          0          0          0       1127   stm32f1xx_hal_dma.o
-       392         46          0          0         32       4586   stm32f1xx_hal_flash.o
-       240         26          0          0          0       3173   stm32f1xx_hal_flash_ex.o
-       524         42          0          0          0       3455   stm32f1xx_hal_gpio.o
-       544         56          0          0          0       3508   stm32f1xx_hal_msp.o
-      1272        100          0          0          0       5084   stm32f1xx_hal_rcc.o
-       448         44          0          0          0       2513   stm32f1xx_hal_rcc_ex.o
-       880         20          0          0          0       8733   stm32f1xx_hal_tim.o
-        70          0          0          0          0       2277   stm32f1xx_hal_tim_ex.o
-      1216         12          0          0          0       8578   stm32f1xx_hal_uart.o
-        68         24          0          0          0       5273   stm32f1xx_it.o
-        72         16         24          4          0       1103   system_stm32f1xx.o
-       354         16          0          9          0       2103   upper_computer.o
-        48          6          0          0          0        482   user_adc.o
-       196         58          0          0          0       1922   user_can.o
-       310          6          0          0       2048       4303   user_flash.o
-         2          0          0          0          0        692   user_time.o
-       266         54          0         12        256       5481   user_usart1.o
-        96         16          0         12        256       2483   user_usart2.o
+       720         34          0          0          0       5753   hal_i2c.o
+        68         14          0          0          0       1368   infraredsensor.o
+      1114        268          0         24        280     522068   main.o
+       388         32        178          0        512       3481   process_m3.o
+      1352        130        256          0          0       7942   sht1x.o
+       774         42          0          1          0      11732   sht3x.o
+        36          8        304          0       4096        812   startup_stm32f103xe.o
+       164         28          0         12          0       6637   stm32f1xx_hal.o
+      1282         58          0          0          0       7415   stm32f1xx_hal_adc.o
+      1408          0          0          0          0      12860   stm32f1xx_hal_can.o
+       198         14          0          0          0      29043   stm32f1xx_hal_cortex.o
+       304          8          0          0          0       1199   stm32f1xx_hal_dma.o
+       392         46          0          0         32       4866   stm32f1xx_hal_flash.o
+       240         26          0          0          0       3317   stm32f1xx_hal_flash_ex.o
+       524         42          0          0          0       3599   stm32f1xx_hal_gpio.o
+       544         56          0          0          0       3716   stm32f1xx_hal_msp.o
+      1272        100          0          0          0       5292   stm32f1xx_hal_rcc.o
+       448         44          0          0          0       2621   stm32f1xx_hal_rcc_ex.o
+       880         20          0          0          0       9185   stm32f1xx_hal_tim.o
+        70          0          0          0          0       2417   stm32f1xx_hal_tim_ex.o
+      1216         12          0          0          0       9006   stm32f1xx_hal_uart.o
+        68         24          0          0          0       5725   stm32f1xx_it.o
+        72         16         24          4          0       1211   system_stm32f1xx.o
+       354         16          0          9          0       2243   upper_computer.o
+        48          6          0          0          0        518   user_adc.o
+       196         58          0          0          0       2062   user_can.o
+       310          6          0          0       2048       4583   user_flash.o
+         2          0          0          0          0        760   user_time.o
+       266         54          0         12        256       5857   user_usart1.o
+        96         16          0         12        256       2655   user_usart2.o
 
     ----------------------------------------------------------------------
-     14844       1178        796         80       7484     672259   Object Totals
+     14844       1178        796         80       7484     679943   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         38          0          2          6          4          0   (incl. Padding)
 
@@ -2746,8 +2746,8 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     19272       1284        796         84       7484     664995   Grand Totals
-     19272       1284        796         84       7484     664995   ELF Image Totals
+     19272       1284        796         84       7484     672679   Grand Totals
+     19272       1284        796         84       7484     672679   ELF Image Totals
      19272       1284        796         84          0          0   ROM Totals
 
 ==============================================================================
