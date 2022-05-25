@@ -80,7 +80,7 @@ float sensor_tem = 0; //温度
 uint8_t  switching=0;
 uint8_t  sensor_number=0;
 uint16_t send_count=0;
-uint16_t Can_STD_ID=0;
+uint16_t Can_STD_ID=0x06;
 uint8_t  flag_send_data=0;
 uint8_t Can_data[8]={0};
 /* USER CODE END PV */
@@ -143,7 +143,9 @@ int main(void)
 	1.指定模块的传感器类型为火焰传感器
 	2.发送数据时采集CAN通信地址为0x06
 	*/
-
+  Sensor_Type_t=STMFLASH_ReadHalfWord(FLASH_Sensor_Type);	    //配置M3主控模块采集的传感器类型
+  open_usart1_receive_interrupt();  //启动USART1串口中断
+  can_start(); //启动CAN总线
 		
 		
   /*配置 end*/
@@ -160,15 +162,46 @@ int main(void)
 		
 		vol=Get_Voltage();//火焰
 		
-    /*每间隔1.5秒发送一次火焰传感器数据 begin*/
-
-		
+    /*每间隔1.5秒发送一次火焰传感器数据 begin*/		
 		
     /*添加对ZigBee数据转发的处理 end*/
 
-      
+    Can_Send_Msg_StdId(Can_STD_ID,8,Sensor_Type_t);
+	
+		HAL_Delay(1500);
     /* USER CODE END WHILE */
-
+		/*if(1)
+		{
+			switch(vol)
+			{
+				case Value_ADC:                                    //光照 空气 火焰 可燃气体
+					sensor_number=1;
+					vol=Get_Voltage();
+				  printf("vol=Get_Voltage  ===== %x \r\n",vol);				
+					break;
+				case Value_Switch:				                         //人体 红外 声音
+					sensor_number=1; 
+					switching=Switching_Value();	 
+					printf("switching=Switching_Value== %d \r\n",switching);
+					break;
+				default:
+					break;
+			}	
+			//CAN节点发送传感器数据至CAN总线   
+            Can_Send_Msg_StdId(Can_STD_ID,8,Sensor_Type_t);
+		}	
+        
+        HAL_Delay(1500);    //不可删除，否则造成发送数据量过大，导致网关接收占用太多资源
+        
+		//USART1 通过M3主控模块配置工具配置采集传感器类型 或 或者CAN发送标准帧ID （注标准帧不能超过0 to 0x7FF）
+		*/
+		if(!usart1_data_fifo_is_empty())
+		{			
+			HAL_Delay(100);
+			process_up();		
+		} 
+    /* USER CODE BEGIN 3 */
+ 
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
