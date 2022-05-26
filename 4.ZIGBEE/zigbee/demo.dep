@@ -2,7 +2,7 @@
 
 <project>
   <fileVersion>2</fileVersion>
-  <fileChecksum>3916558721</fileChecksum>
+  <fileChecksum>3039078118</fileChecksum>
   <configuration>
     <name>Debug</name>
     <outputs>
@@ -180,7 +180,7 @@
       <inputs>
         <tool>
           <name>XLINK</name>
-          <file> 134 70 113 126 43 55 48 5 32 53 30 136 54 117 24 15 4 31 46 122 123 11 10 49 130 25</file>
+          <file> 134 70 113 126 43 8 55 48 5 32 53 30 136 54 117 24 15 4 31 46 122 123 11 10 130 25</file>
         </tool>
       </inputs>
     </file>
@@ -258,7 +258,7 @@
         </tool>
         <tool>
           <name>ICC8051</name>
-          <file> 73 51 0 104 72 64</file>
+          <file> 20 51 12 17 72 64</file>
         </tool>
       </inputs>
     </file>
@@ -281,7 +281,7 @@
         </tool>
         <tool>
           <name>ICC8051</name>
-          <file> 73 51 0 104 103 109 72 89</file>
+          <file> 20 51 12 17 129 16 72 40</file>
         </tool>
       </inputs>
     </file>
@@ -304,7 +304,7 @@
         </tool>
         <tool>
           <name>ICC8051</name>
-          <file> 73 51 0 104</file>
+          <file> 20 51 12 17</file>
         </tool>
       </inputs>
     </file>
@@ -327,7 +327,7 @@
         </tool>
         <tool>
           <name>ICC8051</name>
-          <file> 66 73 51 72 14 104 119 22</file>
+          <file> 66 20 51 72 14 17 119 22</file>
         </tool>
       </inputs>
     </file>
@@ -419,7 +419,7 @@
         </tool>
         <tool>
           <name>ICC8051</name>
-          <file> 51 73 94</file>
+          <file> 51 20 94</file>
         </tool>
       </inputs>
     </file>
@@ -442,7 +442,7 @@
         </tool>
         <tool>
           <name>ICC8051</name>
-          <file> 73 51 0 109 104 89 79</file>
+          <file> 20 51 12 16 17 40 133</file>
         </tool>
       </inputs>
     </file>
@@ -465,7 +465,7 @@
         </tool>
         <tool>
           <name>ICC8051</name>
-          <file> 73 51 72 89</file>
+          <file> 73 51 39 89</file>
         </tool>
       </inputs>
     </file>
@@ -488,7 +488,7 @@
         </tool>
         <tool>
           <name>ICC8051</name>
-          <file> 73 51 64 87</file>
+          <file> 20 51 36 87</file>
         </tool>
       </inputs>
     </file>
@@ -511,7 +511,7 @@
         </tool>
         <tool>
           <name>ICC8051</name>
-          <file> 51 73 97</file>
+          <file> 51 20 97</file>
         </tool>
       </inputs>
     </file>
@@ -534,7 +534,7 @@
         </tool>
         <tool>
           <name>ICC8051</name>
-          <file> 73 51 89 72 80 52 115 22 57</file>
+          <file> 20 51 40 39 80 52 115 22 57</file>
         </tool>
       </inputs>
     </file>
@@ -580,7 +580,7 @@
         </tool>
         <tool>
           <name>ICC8051</name>
-          <file> 73 51 72 79</file>
+          <file> 73 51 39 79</file>
         </tool>
       </inputs>
     </file>
@@ -603,7 +603,7 @@
         </tool>
         <tool>
           <name>ICC8051</name>
-          <file> 51 73 90</file>
+          <file> 51 20 90</file>
         </tool>
       </inputs>
     </file>
@@ -626,7 +626,7 @@
         </tool>
         <tool>
           <name>ICC8051</name>
-          <file> 73 51 111 110</file>
+          <file> 20 51 111 6</file>
         </tool>
       </inputs>
     </file>
@@ -672,7 +672,7 @@
         </tool>
         <tool>
           <name>ICC8051</name>
-          <file> 95 51</file>
+          <file> 128 51</file>
         </tool>
       </inputs>
     </file>
@@ -695,7 +695,7 @@
         </tool>
         <tool>
           <name>ICC8051</name>
-          <file> 73 51 2 104 72</file>
+          <file> 73 51 2 104 39</file>
         </tool>
       </inputs>
     </file>
@@ -741,7 +741,7 @@
         </tool>
         <tool>
           <name>ICC8051</name>
-          <file> 73 51 104 109 111 110</file>
+          <file> 73 51 104 109 13 110</file>
         </tool>
       </inputs>
     </file>
@@ -764,7 +764,7 @@
         </tool>
         <tool>
           <name>ICC8051</name>
-          <file> 73 51 104 110 106 111 57 22</file>
+          <file> 73 51 104 110 106 13 57 22</file>
         </tool>
       </inputs>
     </file>
@@ -796,10 +796,22 @@
       <inputs>
         <tool>
           <name>BILINK</name>
-          <file> 131 125 61 132 118 62 60 42 35 26 33 116 9 59 47 121 127 114 58 124 37 41 38</file>
+          <file> 131 125 61 29 132 118 62 60 42 35 26 33 116 9 59 47 121 127 114 58 124 37 38</file>
         </tool>
       </inputs>
     </file>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\fire_sensor.c</name>
+      <tool>ICC8051</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\temprh_sensor.c</name>
+      <tool>ICC8051</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\collect.c</name>
+      <tool>ICC8051</tool>
+    </forcedrebuild>
   </configuration>
   <configuration>
     <name>Release</name>

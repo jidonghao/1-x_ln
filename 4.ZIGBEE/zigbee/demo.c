@@ -265,7 +265,7 @@
         </option>
         <option>
           <name>CCDefines</name>
-          <state>CC2530_DEBUG</state>
+          <state>xCC2530_DEBUG</state>
         </option>
         <option>
           <name>CCPreprocFile</name>
@@ -6226,7 +6226,6 @@
     <file>
       <name>$PROJ_DIR$\collectto.c</name>
       <excluded>
-        <configuration>Debug</configuration>
         <configuration>collectto</configuration>
       </excluded>
     </file>
@@ -6242,6 +6241,7 @@
     <file>
       <name>$PROJ_DIR$\temprh_sensor.c</name>
       <excluded>
+        <configuration>Debug</configuration>
         <configuration>fire_sensor</configuration>
         <configuration>collect</configuration>
       </excluded>
