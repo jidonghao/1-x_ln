@@ -1,5 +1,5 @@
 [DebugChecksum]
-Checksum=87433788
+Checksum=-1122442057
 [DisAssemblyWindow]
 NumStates=_ 1
 State 1=_ 1
@@ -52,5 +52,6 @@ LoggingEnabled=_ 0
 LogFile=_ ""
 [Aliases]
 A0=_ "D:\BasicRF\zigbee\collectto.c" ""
-Count=1
+A1=_ "F:\code\RFBASE\CC2530_lib\basicrf\basic_rf.c" "E:\jidonghao\jidonghao_16\4.ZIGBEE\CC2530_lib\basicrf\basic_rf.h"
+Count=2
 SuppressDialog=1
