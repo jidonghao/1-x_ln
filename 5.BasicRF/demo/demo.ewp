@@ -150,7 +150,7 @@
         </option>
         <option>
           <name>RTLibraryPath</name>
-          <state>$TOOLKIT_DIR$\LIB\CLIB\cl-pli-nsid-1e16x01.r51</state>
+          <state>$TOOLKIT_DIR$\LIB\CLIB\cl-pli-blxd-1e16x01.r51</state>
         </option>
         <option>
           <name>Input variant</name>
@@ -695,11 +695,11 @@
         <debug>1</debug>
         <option>
           <name>XOutOverride</name>
-          <state>1</state>
+          <state>0</state>
         </option>
         <option>
           <name>OutputFile</name>
-          <state>demo.hex</state>
+          <state>demo.d51</state>
         </option>
         <option>
           <name>OutputFormat</name>

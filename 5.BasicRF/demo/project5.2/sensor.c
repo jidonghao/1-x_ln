@@ -34,11 +34,7 @@
 #define SENSOR_FIRE 0x03  //火焰
 
 /*  LED n 闪烁 time 毫秒 宏 */
-#define FlashLed(n,time)do{\
-                halLedSet(n);\
-                halMcuWaitMs(time);\
-                halLedClear(n);\
-             }while(0)
+#define FlashLed(n,time)do{halLedSet(n);halMcuWaitMs(time);halLedClear(n);}while(0)
 
 /*  数组大小  */
 #define MAX_SEND_BUF_LEN  128 //无线数据最大发送长度
@@ -69,7 +65,7 @@ uint8 CheckSum(uint8 *buf, uint8 len){
 }
 
 /*  定义初始化函数BasicRF */
-void ConfigRf_Int(void){
+void ConfigRf_Init(void){
   basicRfConfig.panId = PAN_ID; 
   basicRfConfig.channel = RF_CHANNEL;
   basicRfConfig.myAddr  = MY_ADDR;
@@ -79,21 +75,21 @@ void ConfigRf_Int(void){
 }
 
 void main(void){
-  halBoadrInit();
+  halBoardInit();
   ConfigRf_Init();
   Timer4_Init();
   Timer4_On();
-  SHT_Init();
+
+  //SHT_Init();
   
   while(1){
     APP_SEND_DATA_FLAG  = GetSendDataFlag();
     if(APP_SEND_DATA_FLAG == 1){
-      uint8 sensor_tem;
-      uint8 sensor_val;
-      
-      SHT_SmpSnValue((int8*)(&sensor_tem),(uint8*)(&sensor_val));
+      uint16 sensor_tem,sensor_val;
+      call_sht11((unsigned int *)(&sensor_tem),(unsigned int *)(&sensor_val));
+      //SHT_SmpSnValue((int8*)(&sensor_tem),(uint8*)(&sensor_val));
       #ifdef CC2530_DEBUG
-      uart_printf("温湿度传感器，温度：%d℃，湿度：%d%%\r\n",sensor_tem,sensor_val);
+      uart_printf("温湿度传感器，温度：%d℃，湿度：%d%% \r\n",sensor_tem,sensor_val);
       #endif
       
       memset(pTxData,'\0',MAX_SEND_BUF_LEN);

@@ -1,17 +1,5 @@
-[Interrupts]
-Enabled=1
-[MemoryMap]
-Enabled=0
-Base=0
-UseAuto=0
-TypeViolation=1
-UnspecRange=1
-ActionState=1
-[TraceHelper]
-Enabled=0
-ShowSource=1
 [DebugChecksum]
-Checksum=1247764041
+Checksum=87433788
 [DisAssemblyWindow]
 NumStates=_ 1
 State 1=_ 1
@@ -31,6 +19,30 @@ UseTrigger=1
 TriggerName=main
 LimitSize=0
 ByteLimit=50
+[InterruptLog]
+LogEnabled=0
+SumEnabled=0
+GraphEnabled=0
+ShowTimeLog=1
+ShowTimeSum=1
+SumSortOrder=0
+[Interrupts]
+Enabled=1
+[MemoryMap]
+Enabled=0
+Base=0
+UseAuto=0
+TypeViolation=1
+UnspecRange=1
+ActionState=1
+[TraceHelper]
+Enabled=0
+ShowSource=1
+[Breakpoints]
+Count=0
+[ChipconEmu]
+Stop timers on halt=0
+Leave target running=1
 [Log file]
 LoggingEnabled=_ 0
 LogFile=_ ""
@@ -38,11 +50,6 @@ Category=_ 0
 [TermIOLog]
 LoggingEnabled=_ 0
 LogFile=_ ""
-[Breakpoints]
-Count=0
-[ChipconEmu]
-Stop timers on halt=0
-Leave target running=1
 [Aliases]
 A0=_ "D:\BasicRF\zigbee\collectto.c" ""
 Count=1

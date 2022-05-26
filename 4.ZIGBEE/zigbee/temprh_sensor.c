@@ -74,8 +74,6 @@ void ConfigRf_Init(void)
   basicRfReceiveOn();                // 打开RF  
 }  
 
-
-
 void main(void)    
 {
     halBoardInit();  //模块相关资源的初始化
@@ -91,7 +89,7 @@ void main(void)
             call_sht11((unsigned int *)(&sensor_tem),(unsigned int *)(&sensor_val));    //取温湿度数据
 #ifdef CC2530_DEBUG
             //把采集数据传化成字符串，以便于在串口上显示观察
-            uart_printf("温湿度传感器，温度：%d℃, 湿度：%d%%\r\n", sensor_tem, sensor_val); 
+            uart_printf("AAA温湿度传感器，温度：%d℃, 湿度：%d%%\r\n", sensor_tem, sensor_val); 
 #endif /*CC2530_DEBUG*/
             memset(pTxData, '\0', MAX_SEND_BUF_LEN);
             pTxData[0]=START_HEAD;//帧头

@@ -1057,7 +1057,7 @@
         </option>
         <option>
           <name>Previous Derivative File</name>
-          <state>No device selected</state>
+          <state>$TOOLKIT_DIR$\config\devices\</state>
         </option>
         <option>
           <name>Showed Derivative</name>
@@ -1182,7 +1182,7 @@
         </option>
         <option>
           <name>RTConfigPath</name>
-          <state>xxx.h</state>
+          <state></state>
         </option>
         <option>
           <name>RTLibraryPath</name>
@@ -1297,7 +1297,7 @@
         <debug>0</debug>
         <option>
           <name>OutputFile</name>
-          <state></state>
+          <state>$FILE_BNAME$.r51</state>
         </option>
         <option>
           <name>CCDefines</name>
@@ -1509,7 +1509,7 @@
         </option>
         <option>
           <name>CCOptLevelSlave</name>
-          <state>1</state>
+          <state>3</state>
         </option>
         <option>
           <name>CompilerMisraRules04</name>
@@ -1730,7 +1730,7 @@
         </option>
         <option>
           <name>OutputFile</name>
-          <state></state>
+          <state>demo.a51</state>
         </option>
         <option>
           <name>OutputFormat</name>
@@ -6218,6 +6218,7 @@
     <file>
       <name>$PROJ_DIR$\collect.c</name>
       <excluded>
+        <configuration>Debug</configuration>
         <configuration>fire_sensor</configuration>
         <configuration>collectto</configuration>
       </excluded>
@@ -6225,14 +6226,17 @@
     <file>
       <name>$PROJ_DIR$\collectto.c</name>
       <excluded>
+        <configuration>Debug</configuration>
         <configuration>collectto</configuration>
       </excluded>
     </file>
     <file>
       <name>$PROJ_DIR$\fire_sensor.c</name>
       <excluded>
+        <configuration>Debug</configuration>
         <configuration>temprh_sensor</configuration>
         <configuration>collect</configuration>
+        <configuration>collectto</configuration>
       </excluded>
     </file>
     <file>
@@ -6240,7 +6244,6 @@
       <excluded>
         <configuration>fire_sensor</configuration>
         <configuration>collect</configuration>
-        <configuration>collectto</configuration>
       </excluded>
     </file>
   </group>
