@@ -1,5 +1,5 @@
 [DebugChecksum]
-Checksum=1199366561
+Checksum=1562664325
 [DisAssemblyWindow]
 NumStates=_ 1
 State 1=_ 1
@@ -38,11 +38,6 @@ ActionState=1
 [TraceHelper]
 Enabled=0
 ShowSource=1
-[Breakpoints]
-Count=0
-[ChipconEmu]
-Stop timers on halt=0
-Leave target running=1
 [Log file]
 LoggingEnabled=_ 0
 LogFile=_ ""
@@ -50,6 +45,11 @@ Category=_ 0
 [TermIOLog]
 LoggingEnabled=_ 0
 LogFile=_ ""
+[Breakpoints]
+Count=0
+[ChipconEmu]
+Stop timers on halt=0
+Leave target running=1
 [Aliases]
 A0=_ "D:\BasicRF\zigbee\collectto.c" ""
 A1=_ "F:\code\RFBASE\CC2530_lib\basicrf\basic_rf.c" "E:\jidonghao\jidonghao_16\4.ZIGBEE\CC2530_lib\basicrf\basic_rf.h"

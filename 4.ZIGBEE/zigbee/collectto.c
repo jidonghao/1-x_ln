@@ -18,7 +18,7 @@
 #define SENSOR_RH     0x02//湿度
 #define SENSOR_FIRE   0x03//火焰  
 /*****点对点通讯地址设置******/
-#define RF_CHANNEL                21         // 频道 11~26
+#define RF_CHANNEL                11         // 频道 11~26
 #define PAN_ID                    0xD0C2     //网络id
 #define MY_ADDR                   0xB4F3     //本机模块地址
 

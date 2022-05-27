@@ -14,7 +14,7 @@
 #include <stdio.h>
 
 /*****点对点通讯地址设置******/
-#define RF_CHANNEL                26        // 频道 11~26
+#define RF_CHANNEL                11        // 频道 11~26
 #define PAN_ID                    0xD0C2     //网络id
 #define MY_ADDR                   0xB4F3     //本机模块地址
 
