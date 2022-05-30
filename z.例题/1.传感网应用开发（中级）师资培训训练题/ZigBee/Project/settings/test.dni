@@ -18,7 +18,7 @@ ActionState=1
 Enabled=0
 ShowSource=1
 [DebugChecksum]
-Checksum=-1036586084
+Checksum=-1811581508
 [DisAssemblyWindow]
 NumStates=_ 1
 State 1=_ 1
@@ -49,15 +49,11 @@ Count=0
 Stop timers on halt=0
 Leave target running=1
 [Aliases]
-A0=_ "D:\新大陆\认证题库建设\中级题库\对外\实操题库\传感网应用开发(中级) 第1套_ZigBee和CAN\源码 参考答案\03 ZigBee模块参考源码\CC2530_lib\common\hal_mcu.c" ""
-A1=_ "D:\新大陆\认证题库建设\中级题库\对外\实操题库\传感网应用开发(中级) 第1套_ZigBee和CAN\源码 参考答案\03 ZigBee模块参考源码\CC2530_lib\common\hal_uart.c" ""
-A2=_ "D:\新大陆\认证题库建设\中级题库\对外\实操题库\传感网应用开发(中级) 第1套_ZigBee和CAN\源码 参考答案\03 ZigBee模块参考源码\Project\EndDev.c" ""
-A3=_ "D:\新大陆\认证题库建设\中级题库\对外\实操题库\传感网应用开发(中级) 第1套_ZigBee和CAN\源码 参考答案\03 ZigBee模块参考源码\Project\GateDev.c" ""
-A4=_ "E:\1+X证书工作\10 教学资源\出题1套要求（彭）\(20200323更新）蔡教武老师+中级(Zigbee+485+云平台)\参考源码\02 ZIGBEE模块参考源码\CC2530_lib\board\hal_led.c" ""
-A5=_ "E:\1+X证书工作\10 教学资源\出题1套要求（彭）\(20200323更新）蔡教武老师+中级(Zigbee+485+云平台)\参考源码\02 ZIGBEE模块参考源码\CC2530_lib\common\hal_mcu.c" ""
-A6=_ "E:\1+X证书工作\10 教学资源\出题1套要求（彭）\(20200323更新）蔡教武老师+中级(Zigbee+485+云平台)\参考源码\02 ZIGBEE模块参考源码\CC2530_lib\common\hal_rf.c" ""
-A7=_ "E:\1+X证书工作\10 教学资源\出题1套要求（彭）\(20200323更新）蔡教武老师+中级(Zigbee+485+云平台)\参考源码\03 ZigBee模块参考源码\CC2530_lib\common\hal_mcu.c" ""
-A8=_ "E:\1+X证书工作\10 教学资源\出题1套要求（彭）\(20200323更新）蔡教武老师+中级(Zigbee+485+云平台)\参考源码\03 ZigBee模块参考源码\CC2530_lib\common\hal_uart.c" "D:\Newland\1+X传感网应用开发_初级\20210308\1_1+X 传感网应用开发 师资培训公开题 中级\传感网应用开发（中级）  第1套源码 参考答案\03 ZigBee模块参考源码\CC2530_lib\common\hal_uart.c"
-A9=_ "E:\1+X证书工作\10 教学资源\出题1套要求（彭）\(20200323更新）蔡教武老师+中级(Zigbee+485+云平台)\参考源码\03 ZigBee模块参考源码\CC2530_lib\mylib\TIMER.c" ""
-Count=10
+A0=_ "E:\1+X证书工作\10 教学资源\出题1套要求（彭）\(20200323更新）蔡教武老师+中级(Zigbee+485+云平台)\参考源码\02 ZIGBEE模块参考源码\CC2530_lib\board\hal_led.c" ""
+A1=_ "E:\1+X证书工作\10 教学资源\出题1套要求（彭）\(20200323更新）蔡教武老师+中级(Zigbee+485+云平台)\参考源码\02 ZIGBEE模块参考源码\CC2530_lib\common\hal_mcu.c" ""
+A2=_ "E:\1+X证书工作\10 教学资源\出题1套要求（彭）\(20200323更新）蔡教武老师+中级(Zigbee+485+云平台)\参考源码\02 ZIGBEE模块参考源码\CC2530_lib\common\hal_rf.c" ""
+A3=_ "E:\1+X证书工作\10 教学资源\出题1套要求（彭）\(20200323更新）蔡教武老师+中级(Zigbee+485+云平台)\参考源码\03 ZigBee模块参考源码\CC2530_lib\common\hal_mcu.c" ""
+A4=_ "E:\1+X证书工作\10 教学资源\出题1套要求（彭）\(20200323更新）蔡教武老师+中级(Zigbee+485+云平台)\参考源码\03 ZigBee模块参考源码\CC2530_lib\common\hal_uart.c" "D:\Newland\1+X传感网应用开发_初级\20210308\1_1+X 传感网应用开发 师资培训公开题 中级\传感网应用开发（中级）  第1套源码 参考答案\03 ZigBee模块参考源码\CC2530_lib\common\hal_uart.c"
+A5=_ "E:\1+X证书工作\10 教学资源\出题1套要求（彭）\(20200323更新）蔡教武老师+中级(Zigbee+485+云平台)\参考源码\03 ZigBee模块参考源码\CC2530_lib\mylib\TIMER.c" ""
+Count=6
 SuppressDialog=1

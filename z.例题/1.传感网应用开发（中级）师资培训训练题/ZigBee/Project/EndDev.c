@@ -22,9 +22,9 @@ uint8 txData[16];
 void configRF(void)
 {
     /*开始完善代码——basicRf配置和初始化*/
-    cfg.myAddr = 0x0016;
-    cfg.panId = 0x0016;
-    cfg.channel = 26;
+    cfg.myAddr = 0x0234;
+    cfg.panId = 0x0234;
+    cfg.channel = 20;
     cfg.ackRequest = TRUE;
     
     while(basicRfInit(&cfg)==FAILED);

@@ -195,12 +195,20 @@ int main(void)
   printf("=======GATAWAY START =====\r\n");                 
   while (1)
   {
-  	
+		if(zigbee_flag)
+		{
+			zigbee_flag=0;
+			Can_Send_Msg_ID(zigbee_can_data,zigbee_id,8);
+			HAL_Delay(1500);
+		}
+  	else
+		{
 		vol=Get_Voltage();//火焰
 		
     /*每间隔1.5秒发送一次火焰传感器数据 begin*/
     Can_Send_Msg_StdId(Can_STD_ID,8,Sensor_Type_t);
     HAL_Delay(1500);      
+		}
     /*添加对ZigBee数据转发的处理 end*/
     
     /* USER CODE END WHILE */
