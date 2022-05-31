@@ -32,9 +32,9 @@ void ByteCopy(uint8 *dst,uint8 *src,uint8 len)
 void configRF(void)
 {
     /*开始完善代码——basicRf配置和初始化*/
-    cfg.myAddr = 0x8234;
-    cfg.panId = 0x0234;
-    cfg.channel = 20;
+    cfg.myAddr = 0x8016;
+    cfg.panId = 0x0016;
+    cfg.channel = 16;
     cfg.ackRequest = TRUE;
     
     while(basicRfInit(&cfg)==FAILED);
@@ -59,15 +59,10 @@ void main(void)
             {
                 halLedSet(2);
                 
-                 sensorValue=rxData[1];
-                 sensorValue<<=8;
-                 sensorValue|=rxData[2];
-                
-                 if(sensorValue<200)
-                    P1&=~0x40;
-                 else
-                    P1|=0x40;
-                 
+                uTxlen=8;
+                ByteCopy(uTxData,rxData,uTxlen);
+                halUartWrite(uTxData,uTxlen);
+          
                 halMcuWaitMs(100);  
                 halLedClear(2);  
             }

@@ -2370,35 +2370,35 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-        56         10          0          0          0       1030   infraredsensor.o
-       994        144          0         42        344     517103   main.o
-        72         10          0          0          0        983   max3485.o
-        28          0          0          0          0        665   process_m3.o
-       100          8          0          0          0       1571   sht1x.o
-        36          8        304          0       4096        848   startup_stm32f103xe.o
-       164         28          0         12          0       7141   stm32f1xx_hal.o
-      1282         58          0          0          0       7983   stm32f1xx_hal_adc.o
-      1608          0          0          0          0      15243   stm32f1xx_hal_can.o
-       198         14          0          0          0      29415   stm32f1xx_hal_cortex.o
-       304          8          0          0          0       1327   stm32f1xx_hal_dma.o
-       514         42          0          0          0       3148   stm32f1xx_hal_gpio.o
-       636         64          0          0          0       4232   stm32f1xx_hal_msp.o
-      1272        100          0          0          0       5668   stm32f1xx_hal_rcc.o
-       448         44          0          0          0       2805   stm32f1xx_hal_rcc_ex.o
-       880         20          0          0          0      10017   stm32f1xx_hal_tim.o
-        70          0          0          0          0       2669   stm32f1xx_hal_tim_ex.o
-      1216         12          0          0          0       9762   stm32f1xx_hal_uart.o
-        80         30          0          0          0       7052   stm32f1xx_it.o
-        72         16         24          4          0       1399   system_stm32f1xx.o
-         0          0          0          9          0        986   upper_computer.o
-        48          6          0          0          0        582   user_adc.o
-       972        554          0          4          0       4641   user_can.o
-         2          0          0          0          0        884   user_time.o
-       120         28          0         12        256       3482   user_usart1.o
-        76         12          0         12        256       2402   user_usart2.o
+        56         10          0          0          0        970   infraredsensor.o
+       994        144          0         42        344     516391   main.o
+        72         10          0          0          0        927   max3485.o
+        28          0          0          0          0        637   process_m3.o
+       100          8          0          0          0       1515   sht1x.o
+        36          8        304          0       4096        832   startup_stm32f103xe.o
+       164         28          0         12          0       6905   stm32f1xx_hal.o
+      1282         58          0          0          0       7727   stm32f1xx_hal_adc.o
+      1608          0          0          0          0      14663   stm32f1xx_hal_can.o
+       198         14          0          0          0      29247   stm32f1xx_hal_cortex.o
+       304          8          0          0          0       1267   stm32f1xx_hal_dma.o
+       514         42          0          0          0       3056   stm32f1xx_hal_gpio.o
+       636         64          0          0          0       4060   stm32f1xx_hal_msp.o
+      1272        100          0          0          0       5500   stm32f1xx_hal_rcc.o
+       448         44          0          0          0       2717   stm32f1xx_hal_rcc_ex.o
+       880         20          0          0          0       9641   stm32f1xx_hal_tim.o
+        70          0          0          0          0       2557   stm32f1xx_hal_tim_ex.o
+      1216         12          0          0          0       9394   stm32f1xx_hal_uart.o
+        80         30          0          0          0       6644   stm32f1xx_it.o
+        72         16         24          4          0       1307   system_stm32f1xx.o
+         0          0          0          9          0        930   upper_computer.o
+        48          6          0          0          0        554   user_adc.o
+       972        554          0          4          0       4445   user_can.o
+         2          0          0          0          0        828   user_time.o
+       120         28          0         12        256       3310   user_usart1.o
+        76         12          0         12        256       2286   user_usart2.o
 
     ----------------------------------------------------------------------
-     11284       1216        360         96       4956     643038   Object Totals
+     11284       1216        360         96       4956     638310   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         36          0          0          1          4          0   (incl. Padding)
 
@@ -2454,8 +2454,8 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     15016       1322        360        100       4956     638106   Grand Totals
-     15016       1322        360        100       4956     638106   ELF Image Totals
+     15016       1322        360        100       4956     633378   Grand Totals
+     15016       1322        360        100       4956     633378   ELF Image Totals
      15016       1322        360        100          0          0   ROM Totals
 
 ==============================================================================

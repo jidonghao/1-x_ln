@@ -10,11 +10,6 @@ void halBoardInit(void)
 {
     halMcuInit();
     
-    // 设置p1.6为普通输出IO口
-    P1SEL&=~0x40;
-    P1DIR|=0x40;
-    
-    
     // LEDs
     MCU_IO_OUTPUT(HAL_BOARD_IO_LED_1_PORT, HAL_BOARD_IO_LED_1_PIN, 0);
     MCU_IO_OUTPUT(HAL_BOARD_IO_LED_2_PORT, HAL_BOARD_IO_LED_2_PIN, 0);

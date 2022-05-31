@@ -439,12 +439,11 @@
         </option>
         <option>
           <name>CCIncludePath2</name>
-          <state>$PROJ_DIR$\..\sensor_drv</state>
-          <state>$PROJ_DIR$\..\CC2530_lib\basicrf</state>
-          <state>$PROJ_DIR$\..\CC2530_lib\board</state>
-          <state>$PROJ_DIR$\..\CC2530_lib\common</state>
-          <state>$PROJ_DIR$\..\CC2530_lib\mylib</state>
-          <state>$PROJ_DIR$\..\CC2530_lib\utils</state>
+          <state>E:\jidonghao\jidonghao_16\z.&#x4F8B;&#x9898;\1.&#x4F20;&#x611F;&#x7F51;&#x5e94;&#x7528;&#x5F00;&#x53D1;&#xFF08;&#x4e2D;&#x7eA7;&#xFF09;&#x5e08;&#x8D44;&#x57F9;&#x8BAD;&#x8BAD;&#x7eC3;&#x9898;\ZigBee\CC2530_lib\basicrf</state>
+          <state>E:\jidonghao\jidonghao_16\z.&#x4F8B;&#x9898;\1.&#x4F20;&#x611F;&#x7F51;&#x5e94;&#x7528;&#x5F00;&#x53D1;&#xFF08;&#x4e2D;&#x7eA7;&#xFF09;&#x5e08;&#x8D44;&#x57F9;&#x8BAD;&#x8BAD;&#x7eC3;&#x9898;\ZigBee\CC2530_lib\board</state>
+          <state>E:\jidonghao\jidonghao_16\z.&#x4F8B;&#x9898;\1.&#x4F20;&#x611F;&#x7F51;&#x5e94;&#x7528;&#x5F00;&#x53D1;&#xFF08;&#x4e2D;&#x7eA7;&#xFF09;&#x5e08;&#x8D44;&#x57F9;&#x8BAD;&#x8BAD;&#x7eC3;&#x9898;\ZigBee\CC2530_lib\common</state>
+          <state>E:\jidonghao\jidonghao_16\z.&#x4F8B;&#x9898;\1.&#x4F20;&#x611F;&#x7F51;&#x5e94;&#x7528;&#x5F00;&#x53D1;&#xFF08;&#x4e2D;&#x7eA7;&#xFF09;&#x5e08;&#x8D44;&#x57F9;&#x8BAD;&#x8BAD;&#x7eC3;&#x9898;\ZigBee\CC2530_lib\mylib</state>
+          <state>E:\jidonghao\jidonghao_16\z.&#x4F8B;&#x9898;\1.&#x4F20;&#x611F;&#x7F51;&#x5e94;&#x7528;&#x5F00;&#x53D1;&#xFF08;&#x4e2D;&#x7eA7;&#xFF09;&#x5e08;&#x8D44;&#x57F9;&#x8BAD;&#x8BAD;&#x7eC3;&#x9898;\ZigBee\CC2530_lib\utils</state>
         </option>
         <option>
           <name>CCStdIncCheck</name>
@@ -699,7 +698,7 @@
         </option>
         <option>
           <name>OutputFile</name>
-          <state>DEMO13.d51</state>
+          <state>test.d51</state>
         </option>
         <option>
           <name>OutputFormat</name>
@@ -761,11 +760,11 @@
         </option>
         <option>
           <name>XclOverride</name>
-          <state>1</state>
+          <state>0</state>
         </option>
         <option>
           <name>XclFile</name>
-          <state>$TOOLKIT_DIR$\config\devices\Texas Instruments\lnk51ew_cc2530F256_banked.xcl</state>
+          <state>$TOOLKIT_DIR$\config\devices\Texas Instruments\lnk51ew_CC2530F256_banked.xcl</state>
         </option>
         <option>
           <name>XclFileSlave</name>
@@ -901,7 +900,7 @@
         </option>
         <option>
           <name>ExtraOutputFile</name>
-          <state>DEMO13.hex</state>
+          <state>test.hex</state>
         </option>
         <option>
           <name>ExtraOutputFormat</name>
@@ -2506,12 +2505,11 @@
         </option>
         <option>
           <name>CCIncludePath2</name>
-          <state>$PROJ_DIR$\..\sensor_drv</state>
-          <state>$PROJ_DIR$\..\CC2530_lib\basicrf</state>
-          <state>$PROJ_DIR$\..\CC2530_lib\board</state>
-          <state>$PROJ_DIR$\..\CC2530_lib\common</state>
-          <state>$PROJ_DIR$\..\CC2530_lib\mylib</state>
-          <state>$PROJ_DIR$\..\CC2530_lib\utils</state>
+          <state>E:\18_wsa_1X\&#x4F20;&#x611F;&#x7F51;&#x5e94;&#x7528;&#x5F00;&#x53D1;&#xFF08;&#x4e2D;&#x7eA7;&#xFF09;&#x7B2C;1&#x5957; &#x5e08;&#x8D44;&#x57F9;&#x8BAD;&#x8BAD;&#x7eC3;&#x9898; &#x516C;&#x5F00;&#x8D44;&#x6e90;\2. &#x4F20;&#x611F;&#x7F51;&#x5e94;&#x7528;&#x5F00;&#x53D1;&#xFF08;&#x4e2D;&#x7eA7;&#xFF09; &#x516C;&#x5F00;&#x8BAD;&#x7eC3;&#x9898;&#x7B2C;1&#x5957; work\ZigBee\CC2530_lib\basicrf</state>
+          <state>E:\18_wsa_1X\&#x4F20;&#x611F;&#x7F51;&#x5e94;&#x7528;&#x5F00;&#x53D1;&#xFF08;&#x4e2D;&#x7eA7;&#xFF09;&#x7B2C;1&#x5957; &#x5e08;&#x8D44;&#x57F9;&#x8BAD;&#x8BAD;&#x7eC3;&#x9898; &#x516C;&#x5F00;&#x8D44;&#x6e90;\2. &#x4F20;&#x611F;&#x7F51;&#x5e94;&#x7528;&#x5F00;&#x53D1;&#xFF08;&#x4e2D;&#x7eA7;&#xFF09; &#x516C;&#x5F00;&#x8BAD;&#x7eC3;&#x9898;&#x7B2C;1&#x5957; work\ZigBee\CC2530_lib\board</state>
+          <state>E:\18_wsa_1X\&#x4F20;&#x611F;&#x7F51;&#x5e94;&#x7528;&#x5F00;&#x53D1;&#xFF08;&#x4e2D;&#x7eA7;&#xFF09;&#x7B2C;1&#x5957; &#x5e08;&#x8D44;&#x57F9;&#x8BAD;&#x8BAD;&#x7eC3;&#x9898; &#x516C;&#x5F00;&#x8D44;&#x6e90;\2. &#x4F20;&#x611F;&#x7F51;&#x5e94;&#x7528;&#x5F00;&#x53D1;&#xFF08;&#x4e2D;&#x7eA7;&#xFF09; &#x516C;&#x5F00;&#x8BAD;&#x7eC3;&#x9898;&#x7B2C;1&#x5957; work\ZigBee\CC2530_lib\common</state>
+          <state>E:\18_wsa_1X\&#x4F20;&#x611F;&#x7F51;&#x5e94;&#x7528;&#x5F00;&#x53D1;&#xFF08;&#x4e2D;&#x7eA7;&#xFF09;&#x7B2C;1&#x5957; &#x5e08;&#x8D44;&#x57F9;&#x8BAD;&#x8BAD;&#x7eC3;&#x9898; &#x516C;&#x5F00;&#x8D44;&#x6e90;\2. &#x4F20;&#x611F;&#x7F51;&#x5e94;&#x7528;&#x5F00;&#x53D1;&#xFF08;&#x4e2D;&#x7eA7;&#xFF09; &#x516C;&#x5F00;&#x8BAD;&#x7eC3;&#x9898;&#x7B2C;1&#x5957; work\ZigBee\CC2530_lib\mylib</state>
+          <state>E:\18_wsa_1X\&#x4F20;&#x611F;&#x7F51;&#x5e94;&#x7528;&#x5F00;&#x53D1;&#xFF08;&#x4e2D;&#x7eA7;&#xFF09;&#x7B2C;1&#x5957; &#x5e08;&#x8D44;&#x57F9;&#x8BAD;&#x8BAD;&#x7eC3;&#x9898; &#x516C;&#x5F00;&#x8D44;&#x6e90;\2. &#x4F20;&#x611F;&#x7F51;&#x5e94;&#x7528;&#x5F00;&#x53D1;&#xFF08;&#x4e2D;&#x7eA7;&#xFF09; &#x516C;&#x5F00;&#x8BAD;&#x7eC3;&#x9898;&#x7B2C;1&#x5957; work\ZigBee\CC2530_lib\utils</state>
         </option>
         <option>
           <name>CCStdIncCheck</name>
@@ -2595,7 +2593,7 @@
         </option>
         <option>
           <name>OutputFile</name>
-          <state>$FILE_BNAME$.r51</state>
+          <state></state>
         </option>
         <option>
           <name>ACaseSensitivity</name>
@@ -2828,11 +2826,11 @@
         </option>
         <option>
           <name>XclOverride</name>
-          <state>1</state>
+          <state>0</state>
         </option>
         <option>
           <name>XclFile</name>
-          <state>$TOOLKIT_DIR$\config\devices\Texas Instruments\lnk51ew_cc2530F256_banked.xcl</state>
+          <state>$TOOLKIT_DIR$\config\devices\Texas Instruments\lnk51ew_CC2530F256_banked.xcl</state>
         </option>
         <option>
           <name>XclFileSlave</name>
@@ -2968,7 +2966,7 @@
         </option>
         <option>
           <name>ExtraOutputFile</name>
-          <state>DEMO13.hex</state>
+          <state>test.hex</state>
         </option>
         <option>
           <name>ExtraOutputFormat</name>
@@ -3291,7 +3289,7 @@
         </option>
         <option>
           <name>General Xdata Stack Size</name>
-          <state>0x3FF</state>
+          <state>0xEFF</state>
         </option>
         <option>
           <name>General Ext Stack Size</name>
@@ -3542,12 +3540,11 @@
         </option>
         <option>
           <name>CCIncludePath2</name>
-          <state>$PROJ_DIR$\..\sensor_drv</state>
-          <state>$PROJ_DIR$\..\CC2530_lib\basicrf</state>
-          <state>$PROJ_DIR$\..\CC2530_lib\board</state>
-          <state>$PROJ_DIR$\..\CC2530_lib\common</state>
-          <state>$PROJ_DIR$\..\CC2530_lib\mylib</state>
-          <state>$PROJ_DIR$\..\CC2530_lib\utils</state>
+          <state>E:\18_wsa_1X\&#x4F20;&#x611F;&#x7F51;&#x5e94;&#x7528;&#x5F00;&#x53D1;&#xFF08;&#x4e2D;&#x7eA7;&#xFF09;&#x7B2C;1&#x5957; &#x5e08;&#x8D44;&#x57F9;&#x8BAD;&#x8BAD;&#x7eC3;&#x9898; &#x516C;&#x5F00;&#x8D44;&#x6e90;\2. &#x4F20;&#x611F;&#x7F51;&#x5e94;&#x7528;&#x5F00;&#x53D1;&#xFF08;&#x4e2D;&#x7eA7;&#xFF09; &#x516C;&#x5F00;&#x8BAD;&#x7eC3;&#x9898;&#x7B2C;1&#x5957; work\ZigBee\CC2530_lib\basicrf</state>
+          <state>E:\18_wsa_1X\&#x4F20;&#x611F;&#x7F51;&#x5e94;&#x7528;&#x5F00;&#x53D1;&#xFF08;&#x4e2D;&#x7eA7;&#xFF09;&#x7B2C;1&#x5957; &#x5e08;&#x8D44;&#x57F9;&#x8BAD;&#x8BAD;&#x7eC3;&#x9898; &#x516C;&#x5F00;&#x8D44;&#x6e90;\2. &#x4F20;&#x611F;&#x7F51;&#x5e94;&#x7528;&#x5F00;&#x53D1;&#xFF08;&#x4e2D;&#x7eA7;&#xFF09; &#x516C;&#x5F00;&#x8BAD;&#x7eC3;&#x9898;&#x7B2C;1&#x5957; work\ZigBee\CC2530_lib\board</state>
+          <state>E:\18_wsa_1X\&#x4F20;&#x611F;&#x7F51;&#x5e94;&#x7528;&#x5F00;&#x53D1;&#xFF08;&#x4e2D;&#x7eA7;&#xFF09;&#x7B2C;1&#x5957; &#x5e08;&#x8D44;&#x57F9;&#x8BAD;&#x8BAD;&#x7eC3;&#x9898; &#x516C;&#x5F00;&#x8D44;&#x6e90;\2. &#x4F20;&#x611F;&#x7F51;&#x5e94;&#x7528;&#x5F00;&#x53D1;&#xFF08;&#x4e2D;&#x7eA7;&#xFF09; &#x516C;&#x5F00;&#x8BAD;&#x7eC3;&#x9898;&#x7B2C;1&#x5957; work\ZigBee\CC2530_lib\common</state>
+          <state>E:\18_wsa_1X\&#x4F20;&#x611F;&#x7F51;&#x5e94;&#x7528;&#x5F00;&#x53D1;&#xFF08;&#x4e2D;&#x7eA7;&#xFF09;&#x7B2C;1&#x5957; &#x5e08;&#x8D44;&#x57F9;&#x8BAD;&#x8BAD;&#x7eC3;&#x9898; &#x516C;&#x5F00;&#x8D44;&#x6e90;\2. &#x4F20;&#x611F;&#x7F51;&#x5e94;&#x7528;&#x5F00;&#x53D1;&#xFF08;&#x4e2D;&#x7eA7;&#xFF09; &#x516C;&#x5F00;&#x8BAD;&#x7eC3;&#x9898;&#x7B2C;1&#x5957; work\ZigBee\CC2530_lib\mylib</state>
+          <state>E:\18_wsa_1X\&#x4F20;&#x611F;&#x7F51;&#x5e94;&#x7528;&#x5F00;&#x53D1;&#xFF08;&#x4e2D;&#x7eA7;&#xFF09;&#x7B2C;1&#x5957; &#x5e08;&#x8D44;&#x57F9;&#x8BAD;&#x8BAD;&#x7eC3;&#x9898; &#x516C;&#x5F00;&#x8D44;&#x6e90;\2. &#x4F20;&#x611F;&#x7F51;&#x5e94;&#x7528;&#x5F00;&#x53D1;&#xFF08;&#x4e2D;&#x7eA7;&#xFF09; &#x516C;&#x5F00;&#x8BAD;&#x7eC3;&#x9898;&#x7B2C;1&#x5957; work\ZigBee\CC2530_lib\utils</state>
         </option>
         <option>
           <name>CCStdIncCheck</name>
@@ -3864,11 +3861,11 @@
         </option>
         <option>
           <name>XclOverride</name>
-          <state>1</state>
+          <state>0</state>
         </option>
         <option>
           <name>XclFile</name>
-          <state>$TOOLKIT_DIR$\config\devices\Texas Instruments\lnk51ew_cc2530F256_banked.xcl</state>
+          <state>$TOOLKIT_DIR$\config\devices\Texas Instruments\lnk51ew_CC2530F256_banked.xcl</state>
         </option>
         <option>
           <name>XclFileSlave</name>
@@ -4004,7 +4001,7 @@
         </option>
         <option>
           <name>ExtraOutputFile</name>
-          <state>DEMO13.hex</state>
+          <state>test.hex</state>
         </option>
         <option>
           <name>ExtraOutputFormat</name>
@@ -4146,6 +4143,7 @@
     <file>
       <name>$PROJ_DIR$\EndDev.c</name>
       <excluded>
+        <configuration>Debug</configuration>
         <configuration>GateDev</configuration>
       </excluded>
     </file>
@@ -4171,40 +4169,82 @@
       <name>$PROJ_DIR$\..\CC2530_lib\board\hal_board.c</name>
     </file>
     <file>
+      <name>$PROJ_DIR$\..\CC2530_lib\board\hal_board.h</name>
+    </file>
+    <file>
       <name>$PROJ_DIR$\..\CC2530_lib\board\hal_led.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\CC2530_lib\board\hal_led.h</name>
     </file>
   </group>
   <group>
     <name>common</name>
     <file>
+      <name>$PROJ_DIR$\..\CC2530_lib\common\hal_cc8051.h</name>
+    </file>
+    <file>
       <name>$PROJ_DIR$\..\CC2530_lib\common\hal_clock.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\CC2530_lib\common\hal_clock.h</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\CC2530_lib\common\hal_defs.h</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\CC2530_lib\common\hal_digio.c</name>
     </file>
     <file>
+      <name>$PROJ_DIR$\..\CC2530_lib\common\hal_digio.h</name>
+    </file>
+    <file>
       <name>$PROJ_DIR$\..\CC2530_lib\common\hal_int.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\CC2530_lib\common\hal_int.h</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\CC2530_lib\common\hal_mcu.c</name>
     </file>
     <file>
+      <name>$PROJ_DIR$\..\CC2530_lib\common\hal_mcu.h</name>
+    </file>
+    <file>
       <name>$PROJ_DIR$\..\CC2530_lib\common\hal_rf.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\CC2530_lib\common\hal_rf.h</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\CC2530_lib\common\hal_rf_security.c</name>
     </file>
     <file>
+      <name>$PROJ_DIR$\..\CC2530_lib\common\hal_rf_security.h</name>
+    </file>
+    <file>
       <name>$PROJ_DIR$\..\CC2530_lib\common\hal_rf_util.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\CC2530_lib\common\hal_rf_util.h</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\CC2530_lib\common\hal_sleep.c</name>
     </file>
     <file>
+      <name>$PROJ_DIR$\..\CC2530_lib\common\hal_sleep.h</name>
+    </file>
+    <file>
       <name>$PROJ_DIR$\..\CC2530_lib\common\hal_timer_32k.c</name>
     </file>
     <file>
+      <name>$PROJ_DIR$\..\CC2530_lib\common\hal_timer_32k.h</name>
+    </file>
+    <file>
       <name>$PROJ_DIR$\..\CC2530_lib\common\hal_uart.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\CC2530_lib\common\hal_uart.h</name>
     </file>
   </group>
   <group>
@@ -4213,13 +4253,22 @@
       <name>$PROJ_DIR$\..\CC2530_lib\mylib\TIMER.c</name>
     </file>
     <file>
+      <name>$PROJ_DIR$\..\CC2530_lib\mylib\TIMER.h</name>
+    </file>
+    <file>
       <name>$PROJ_DIR$\..\CC2530_lib\mylib\UART_PRINT.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\CC2530_lib\mylib\UART_PRINT.h</name>
     </file>
   </group>
   <group>
     <name>utils</name>
     <file>
       <name>$PROJ_DIR$\..\CC2530_lib\utils\util.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\CC2530_lib\utils\util.h</name>
     </file>
   </group>
 </project>

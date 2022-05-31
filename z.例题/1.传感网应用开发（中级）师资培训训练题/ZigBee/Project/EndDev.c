@@ -22,9 +22,9 @@ uint8 txData[16];
 void configRF(void)
 {
     /*开始完善代码——basicRf配置和初始化*/
-    cfg.myAddr = 0x0234;
-    cfg.panId = 0x0234;
-    cfg.channel = 20;
+    cfg.myAddr = 0x0016;
+    cfg.panId = 0x0016;
+    cfg.channel = 16;
     cfg.ackRequest = TRUE;
     
     while(basicRfInit(&cfg)==FAILED);
@@ -93,7 +93,7 @@ void main(void)
             txData[6] = '\r';
             txData[7] = '\n';
             
-            basicRfSendPacket(0x8234, txData,8);
+            basicRfSendPacket(0x8016, txData,8);
             halMcuWaitMs(100);
             halLedClear(2);
         }           
