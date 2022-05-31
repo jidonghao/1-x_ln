@@ -250,7 +250,7 @@ int8_t ESP8266_SendSensor(uint8_t sensor, char *TimeStr)
 	int8_t error = 0;
 	uint8_t TxetBuf[MAX_AT_TX_LEN];
 	memset(TxetBuf,0x00,MAX_AT_TX_LEN);//Çå¿Õ»º´æ
-	sprintf((char *)TxetBuf,"{\"t\":3,\"datatype\":2,\"datas\":{\"alarm\":{\"%s\":%d}},\"msgid\":001}",TimeStr,sensor);
+	sprintf((char *)TxetBuf,"{\"t\":3,\"datatype\":2,\"datas\":{\"abcdefg\":{\"%s\":%d}},\"msgid\":001}",TimeStr,sensor);
 	//printf("%s\r\n",TxetBuf);////////////////////////////////////////////////////////////
 	if(ESP8266_IpSend((char *)TxetBuf, strlen((char *)TxetBuf)) < 0)
 	{//·¢ËÍÊ§°Ü
