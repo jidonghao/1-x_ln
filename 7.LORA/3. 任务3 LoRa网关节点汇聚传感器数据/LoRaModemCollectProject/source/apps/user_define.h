@@ -3,7 +3,7 @@
 
 #include <stdbool.h>
 
-#define TRANSPARENCY
+#define xTRANSPARENCY
 
 //LORA模块相关
 #define USE_SX1276_RESET 			false 	//没有使用该引脚

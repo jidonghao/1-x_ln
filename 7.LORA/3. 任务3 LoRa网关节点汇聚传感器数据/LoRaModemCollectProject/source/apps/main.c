@@ -110,7 +110,7 @@ uint16_t GetHexStr(uint8_t *input, uint16_t len, uint8_t *output)
 **********************************************************************************************/
 void LoRa_SendRead( uint16_t NetId, uint8_t addr )
 {
-    uint8_t TxBuffer[BUFFER_SIZE];
+  uint8_t TxBuffer[BUFFER_SIZE];
 
 	TxBuffer[0]=START_HEAD;
 	TxBuffer[1]=CMD_READ;
@@ -118,7 +118,7 @@ void LoRa_SendRead( uint16_t NetId, uint8_t addr )
 	TxBuffer[3]=(uint8_t)NetId;
 	TxBuffer[4]=addr;
 	TxBuffer[5]=CheckSum((uint8_t *)TxBuffer, 5);
-    Radio.Send( TxBuffer, 6);
+  Radio.Send(TxBuffer, 6);
 }
 
 /**********************************************************************************************
