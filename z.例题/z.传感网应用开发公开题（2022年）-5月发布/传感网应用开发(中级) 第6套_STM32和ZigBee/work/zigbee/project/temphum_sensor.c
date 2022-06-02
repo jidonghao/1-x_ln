@@ -115,7 +115,7 @@ void main(void)
              //”√zigbee∑¢ÀÕ
              basicRfSendPacket((unsigned short)SEND_ADDR,(unsigned char *)pTxData,pTxData[2]+1);
              
-             FlashLed(2,100);
+             FlashLed(1,100);
              Timer4_On();
             
             
