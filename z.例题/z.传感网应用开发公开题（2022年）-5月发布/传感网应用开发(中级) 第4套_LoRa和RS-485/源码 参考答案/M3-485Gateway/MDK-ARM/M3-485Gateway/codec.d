@@ -1,0 +1,10 @@
+m3-485gateway\codec.o: ..\Src\codec.c
+m3-485gateway\codec.o: ..\Src\./codec.h
+m3-485gateway\codec.o: C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include\stm32f10x.h
+m3-485gateway\codec.o: .\RTE\_M3-485Gateway\RTE_Components.h
+m3-485gateway\codec.o: ../Drivers/CMSIS/Include/core_cm3.h
+m3-485gateway\codec.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+m3-485gateway\codec.o: ../Drivers/CMSIS/Include/cmsis_version.h
+m3-485gateway\codec.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
+m3-485gateway\codec.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
+m3-485gateway\codec.o: C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include\system_stm32f10x.h
