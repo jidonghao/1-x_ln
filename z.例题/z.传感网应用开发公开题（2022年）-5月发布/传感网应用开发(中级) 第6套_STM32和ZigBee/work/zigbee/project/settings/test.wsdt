@@ -12,7 +12,7 @@
           
           
           
-        <Column0>151</Column0><Column1>0</Column1><Column2>27</Column2><Column3>0</Column3></ColumnWidths>
+        <Column0>216</Column0><Column1>0</Column1><Column2>27</Column2><Column3>0</Column3></ColumnWidths>
       </Workspace>
       <Build>
         
@@ -29,7 +29,7 @@
     <Windows>
       
       
-    <Wnd2>
+    <Wnd0>
         <Tabs>
           <Tab>
             <Identity>TabID-23751-29951</Identity>
@@ -41,7 +41,7 @@
           </Tab>
         </Tabs>
         
-      <SelectedTab>0</SelectedTab></Wnd2><Wnd3>
+      <SelectedTab>0</SelectedTab></Wnd0><Wnd1>
         <Tabs>
           <Tab>
             <Identity>TabID-2024-30154</Identity>
@@ -57,20 +57,20 @@
           </Tab>
         </Tabs>
         
-      <SelectedTab>0</SelectedTab></Wnd3></Windows>
+      <SelectedTab>0</SelectedTab></Wnd1></Windows>
     <Editor>
       
       
       
       
-    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\collect.c</Filename><XPos>0</XPos><YPos>110</YPos><SelStart>3548</SelStart><SelEnd>3548</SelEnd></Tab><ActiveTab>0</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\light_sensor.c</Filename><XPos>0</XPos><YPos>73</YPos><SelStart>2294</SelStart><SelEnd>2294</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\temphum_sensor.c</Filename><XPos>0</XPos><YPos>103</YPos><SelStart>3443</SelStart><SelEnd>3444</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\CC2530_lib\board\hal_led.c</Filename><XPos>0</XPos><YPos>18</YPos><SelStart>1097</SelStart><SelEnd>1097</SelEnd></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\collect.c</Filename><XPos>0</XPos><YPos>23</YPos><SelStart>3548</SelStart><SelEnd>3548</SelEnd></Tab><ActiveTab>0</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\light_sensor.c</Filename><XPos>0</XPos><YPos>73</YPos><SelStart>2294</SelStart><SelEnd>2294</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\temphum_sensor.c</Filename><XPos>0</XPos><YPos>103</YPos><SelStart>3443</SelStart><SelEnd>3444</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\CC2530_lib\board\hal_led.c</Filename><XPos>0</XPos><YPos>18</YPos><SelStart>1097</SelStart><SelEnd>1097</SelEnd></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
     <Positions>
       
       
       
       
       
-    <Top><Row0><Sizes><Toolbar-04620a48><key>iaridepm.enu1</key></Toolbar-04620a48></Sizes></Row0></Top><Left><Row0><Sizes><Wnd2><Rect><Top>-2</Top><Left>-2</Left><Bottom>468</Bottom><Right>198</Right><x>-2</x><y>-2</y><xscreen>200</xscreen><yscreen>200</yscreen><sizeHorzCX>165837</sizeHorzCX><sizeHorzCY>316957</sizeHorzCY><sizeVertCX>165837</sizeVertCX><sizeVertCY>744849</sizeVertCY></Rect></Wnd2></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd3><Rect><Top>-2</Top><Left>-2</Left><Bottom>118</Bottom><Right>1208</Right><x>-2</x><y>-2</y><xscreen>1210</xscreen><yscreen>120</yscreen><sizeHorzCX>1003317</sizeHorzCX><sizeHorzCY>190174</sizeHorzCY><sizeVertCX>165837</sizeVertCX><sizeVertCY>316957</sizeVertCY></Rect></Wnd3></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+    <Top><Row0><Sizes><Toolbar-045906f8><key>iaridepm.enu1</key></Toolbar-045906f8></Sizes></Row0></Top><Left><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>619</Bottom><Right>263</Right><x>-2</x><y>-2</y><xscreen>265</xscreen><yscreen>259</yscreen><sizeHorzCX>165625</sizeHorzCX><sizeHorzCY>317013</sizeHorzCY><sizeVertCX>165625</sizeVertCX><sizeVertCY>760098</sizeVertCY></Rect></Wnd0></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>153</Bottom><Right>1602</Right><x>-2</x><y>-2</y><xscreen>1604</xscreen><yscreen>155</yscreen><sizeHorzCX>1002500</sizeHorzCX><sizeHorzCY>189718</sizeHorzCY><sizeVertCX>165625</sizeVertCX><sizeVertCY>317013</sizeVertCY></Rect></Wnd1></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
   </Desktop>
 </Workspace>
 

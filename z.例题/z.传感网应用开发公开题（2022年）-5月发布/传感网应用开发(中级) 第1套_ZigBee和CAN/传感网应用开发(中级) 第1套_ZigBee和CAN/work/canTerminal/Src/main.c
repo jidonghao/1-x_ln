@@ -143,8 +143,8 @@ int main(void)
 	1.指定模块的传感器类型为火焰传感器
 	2.发送数据时采集CAN通信地址为0x06
 	*/
-
-		
+ Can_STD_ID=0x06;   //配置CAN节点发送的标准帧ID 
+  Sensor_Type_t=0x03;   //配置M3主控模块采集的传感器类型		
 		
   /*配置 end*/
 	
@@ -162,7 +162,8 @@ int main(void)
 		
     /*每间隔1.5秒发送一次火焰传感器数据 begin*/
 
-		
+		    Can_Send_Msg_StdId(Can_STD_ID,8,Sensor_Type_t);
+    HAL_Delay(1500);    
 		
     /*添加对ZigBee数据转发的处理 end*/
 
