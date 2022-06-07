@@ -1,0 +1,370 @@
+/******************************************************************************
+******************************************************************************
+* @file    app/app_slave.c
+* @author  zhao
+* @version V1.0.0
+* @date    2019.07.10
+* @update  2019.09.14
+* @brief   主程序
+******************************************************************************
+******************************************************************************/
+
+/**************include*************************/
+#include "app_master.h"
+static void mater_poll(u8 i);
+static void mater_push(u8 i);
+static uint8_t CHK(const uint8_t *buf, uint8_t len) ;
+
+
+class_sensor  class_sen[class_num];
+static u8 master_init=0;
+
+void master_get_slave(void)
+{
+//   static u8 step=0 ;
+//
+//	if(class_sen[0].senty){
+//	   if(step==0)
+//	   {
+//		  masterreadholdRegister(1,1,1);
+//	   }
+//	   else if(step==1)
+//	   else if(step==1)
+//	   else if(step==1)
+//	}
+    class_sen[0].add=1;
+    class_sen[1].add=2;
+    class_sen[0].senty=Flame_Sensor;
+    class_sen[1].senty=FlammableGas_Sensor;
+    master_init=1;
+
+
+}
+
+
+void modbus_master_rec(void)
+{
+    u8 res;
+
+    // DBG_B_INFO("modbus_master_rec");
+    if(m_ctrl_dev.frameok) {
+
+        res= mb_unpack_frame(&m_send_frame,&m_rev_frame);
+        if(res==MR_OK) {	//解析包成功
+            DBG_B_INFO("解析包成功");
+
+            modbus_show_result(&m_rev_frame);
+
+//            if(rxframe.datalen) {
+//                myfree(SRAMIN,rxframe.data);    //释放内存
+//            }
+        } else if(res==MR_FRAME_FORMAT_ERR) {
+            DBG_R_E("帧格式错误");
+        } else if(res==MR_FRAME_CHECK_ERR) {
+            DBG_R_E("帧校验错误");
+        } else if(res==MR_FRAME_SLAVE_ADDRESS) {
+            DBG_R_E("从机地址错误");
+        } else if(res==MR_FRANE_ILLEGAL_FUNCTION) {
+            DBG_R_E("功能码错误");
+        }
+        clr485rxbuf();
+    }
+
+}
+
+void master_task(void)
+{
+    static uint32_t last_poll;
+	  static uint32_t last_push;
+    static u8 i =0;
+	  static u8 j =0;
+    if((uint32_t)(HAL_GetTick()-last_poll>=500)&&(master_init==1)) {
+        last_poll=HAL_GetTick();
+        mater_poll(i);
+        i++;
+        if(i>=class_num) {
+            i=0;
+        }
+    }
+		
+		if((uint32_t)(HAL_GetTick()-last_push>=1000)) {
+        last_push=HAL_GetTick();
+        mater_push(j);
+        j++;
+       if(j>=class_num) {
+           j=0;
+        }
+    }
+}
+
+static void mater_poll(u8 i)
+{
+    u8 add=0;
+    add =i;
+
+    switch (class_sen[add].senty) {
+    case BodyInfrared_Sensor:
+        masterreadDiscRegister(i+1,0,1);
+        break;
+    case Sound_Sensor:
+        masterreadDiscRegister(i+1,1,1);
+        break;
+    case Infrared_Sensor:
+        masterreadDiscRegister(i+1,2,1);
+        break;
+    //2. 模拟量
+    case Photosensitive_Sensor:
+        masterInputRegister(i+1,0,1);
+        break;
+    case AirQuality_Sensor:
+        masterInputRegister(i+1,1,1);
+        break;
+    case Flame_Sensor:
+        masterInputRegister(i+1,2,1);
+        break;
+    case FlammableGas_Sensor:
+        masterInputRegister(i+1,3,1);
+        break;
+
+    //3.温湿度
+    case TemHum_Sensor:
+        masterreadholdRegister(i+1,0,1);
+        break;
+
+    default:
+        break;
+
+
+    }
+
+}
+static void mater_push(u8 i)
+{
+    u8 push485buf[8];
+  	u8 add=0;
+    add =i;
+	
+	push485buf[0]=0xDD;
+	
+	push485buf[1]=class_sen[add].add;
+
+	push485buf[2]=0x02;
+	
+	push485buf[3]=0x08;
+
+	
+    switch (class_sen[add].senty) {
+    case BodyInfrared_Sensor:
+        push485buf[4]=0x02;
+        break;
+    case Sound_Sensor:
+        push485buf[4]=0x07;
+        break;
+    case Infrared_Sensor:
+        push485buf[4]=0x08;
+        break;
+    //2. 模拟量
+    case Photosensitive_Sensor:
+         push485buf[4]=0x06;
+        break;
+    case AirQuality_Sensor:
+       push485buf[4]=0x05;
+        break;
+    case Flame_Sensor:
+         push485buf[4]=0x03;
+        break;
+    case FlammableGas_Sensor:
+        push485buf[4]=0x04;
+        break;
+
+    //3.温湿度
+    case TemHum_Sensor:
+         push485buf[4]=0x01;
+        break;
+
+    default:
+		push485buf[4]=0x10;
+        break;
+
+
+    }
+	push485buf[5]=(u8)(class_sen[add].value>>8)&&0xFF;
+   push485buf[6]=((u8)class_sen[add].value)&&0xFF;
+	push485buf[7]=CHK(push485buf,7);
+
+	RS4853_Send_Buffer(push485buf, 8);
+
+}
+
+
+
+
+
+u8 unpack_readhold_reg(m_send_frame_typedef *tx,m_rev_frame_typedef *rx)
+{
+    u8 res =0;
+    u16 regaddress;
+    rx->address=m_ctrl_dev.rxbuf[0];
+    rx->function=m_ctrl_dev.rxbuf[1];
+//  rx->address=  (u16)(m_ctrl_dev.rxbuf[3]<<8);
+//  rx->address|=(u16)(m_ctrl_dev.rxbuf[3]);
+    if((u8)(m_send_frame.reg_cnt_value*2)!=(m_ctrl_dev.rxbuf[2])) {
+        DBG_R_E("发送接收字节数不匹配 发送字数 %d  接收字节数 %d",m_send_frame.reg_cnt_value,m_ctrl_dev.rxbuf[2]);
+        res =1;
+        return  res;
+    }
+
+    if(tx->reg_add==1) {
+        class_sen[rx->address-1].add=m_ctrl_dev.rxbuf[4];
+        res =0;
+        return  res;
+    }
+    if(tx->reg_add==2) {
+        class_sen[rx->address-1].senty=(u8)m_ctrl_dev.rxbuf[4];
+        res =0;
+        return  res;
+    } else if((tx->reg_add==0)&&(class_sen[rx->address-1].senty==8)) {
+        class_sen[rx->address-1].value=(u16)(m_ctrl_dev.rxbuf[3]<<8);
+        class_sen[rx->address-1].value|=(u16)(m_ctrl_dev.rxbuf[4]);
+        DBG_B_INFO("当前从机地址 %d  温度值 %d  湿度值 %d",rx->address,m_ctrl_dev.rxbuf[3],m_ctrl_dev.rxbuf[4]);
+        res =0;
+        return  res;
+    }
+    DBG_B_INFO("没有相关命令");
+    res =2;
+    return  res;
+
+}
+
+
+u8 unpack_writehold_reg(m_send_frame_typedef *tx,m_rev_frame_typedef *rx)
+{
+    u8 res =0;
+    u16 regaddress;
+    rx->address=m_ctrl_dev.rxbuf[0];
+    rx->function=m_ctrl_dev.rxbuf[1];
+
+    if(tx->reg_add==1) {
+        class_sen[rx->address-1].add=m_ctrl_dev.rxbuf[4];
+        res =0;
+        return  res;
+    } else  if(tx->reg_add==2) {
+        class_sen[rx->address-1].senty=(u8)m_ctrl_dev.rxbuf[4];
+        res =0;
+        return  res;
+    }
+    DBG_B_INFO("没有相关命令");
+    res =2;
+    return  res;
+
+}
+
+
+
+
+
+
+u8 unpack_readinput_reg(m_send_frame_typedef *tx,m_rev_frame_typedef *rx)
+{
+    u8 res =0;
+    u16 regaddress;
+    rx->address=m_ctrl_dev.rxbuf[0];
+    rx->function=m_ctrl_dev.rxbuf[1];
+
+    if((u8)(m_send_frame.reg_cnt_value*2)!=(m_ctrl_dev.rxbuf[2])) {
+        DBG_R_E("发送接收字节数不匹配 发送字数 %d  接收字节数 %d",m_send_frame.reg_cnt_value,m_ctrl_dev.rxbuf[2]);
+        res =1;
+        return  res;
+    }
+
+    if((tx->reg_add==0)&&(class_sen[rx->address-1].senty==Photosensitive_Sensor)) {
+        class_sen[rx->address-1].value=(u16)(m_ctrl_dev.rxbuf[3]<<8);
+        class_sen[rx->address-1].value|=(u16)(m_ctrl_dev.rxbuf[4]);
+        DBG_B_INFO("当前从机地址 %d  光照传感器ADC为%d ",rx->address, class_sen[rx->address-1].value);
+        res =0;
+        return  res;
+    }
+    if((tx->reg_add==1)&&(class_sen[rx->address-1].senty==AirQuality_Sensor)) {
+        class_sen[rx->address-1].value=(u16)(m_ctrl_dev.rxbuf[3]<<8);
+        class_sen[rx->address-1].value|=(u16)(m_ctrl_dev.rxbuf[4]);
+        DBG_B_INFO("当前从机地址 %d  空气质量传感器ADC为%d ",rx->address, class_sen[rx->address-1].value);
+        res =0;
+        return  res;
+    } else if((tx->reg_add==2)&&(class_sen[rx->address-1].senty==Flame_Sensor)) {
+        class_sen[rx->address-1].value=(u16)(m_ctrl_dev.rxbuf[3]<<8);
+        class_sen[rx->address-1].value|=(u16)(m_ctrl_dev.rxbuf[4]);
+        DBG_B_INFO("当前从机地址 %d 火焰传感器ADC为%d ",rx->address, class_sen[rx->address-1].value);
+        res =0;
+        return  res;
+    } else if((tx->reg_add==3)&&(class_sen[rx->address-1].senty==FlammableGas_Sensor)) {
+        class_sen[rx->address-1].value=(u16)(m_ctrl_dev.rxbuf[3]<<8);
+        class_sen[rx->address-1].value|=(u16)(m_ctrl_dev.rxbuf[4]);
+        DBG_B_INFO("当前从机地址 %d 可燃气体传感器ADC为%d ",rx->address, class_sen[rx->address-1].value);
+        res =0;
+        return  res;
+    }
+    DBG_B_INFO("没有相关命令");
+    res =2;
+    return  res;
+
+}
+
+
+
+u8 unpack_disc_reg(m_send_frame_typedef *tx,m_rev_frame_typedef *rx)
+{
+    u8 res =0;
+    u16 regaddress;
+    rx->address=m_ctrl_dev.rxbuf[0];
+    rx->function=m_ctrl_dev.rxbuf[1];
+
+    if((u8)(m_send_frame.reg_cnt_value)!=(m_ctrl_dev.rxbuf[2])) {
+        DBG_R_E("发送接收字节数不匹配 发送字数 %d  接收字节数 %d",m_send_frame.reg_cnt_value,m_ctrl_dev.rxbuf[2]);
+
+        res =1;
+        return  res;
+    }
+
+    if((tx->reg_add==0)&&(class_sen[rx->address-1].senty==BodyInfrared_Sensor)) {
+        class_sen[rx->address-1].value=(u16)(m_ctrl_dev.rxbuf[4]);
+        DBG_B_INFO("当前从机地址 %d  人体红外值为%d ",rx->address, class_sen[rx->address-1].value);
+        res =0;
+        return  res;
+    }
+    if((tx->reg_add==1)&&(class_sen[rx->address-1].senty==Sound_Sensor)) {
+        class_sen[rx->address-1].value=(u16)(m_ctrl_dev.rxbuf[4]);
+        DBG_B_INFO("当前从机地址 %d  声音传感器%d ",rx->address, class_sen[rx->address-1].value);
+        res =0;
+        return  res;
+    } else if((tx->reg_add==2)&&(class_sen[rx->address-1].senty==Infrared_Sensor)) {
+        class_sen[rx->address-1].value=(u16)(m_ctrl_dev.rxbuf[4]);
+        DBG_B_INFO("当前从机地址 %d 红外传感器%d ",rx->address, class_sen[rx->address-1].value);
+        res =0;
+        return  res;
+    }
+
+    DBG_B_INFO("没有相关命令");
+    res =2;
+    return  res;
+
+}
+
+/*******************************************************************
+
+*******************************************************************/
+static uint8_t CHK(const uint8_t *buf, uint8_t len) 
+{
+    uint8_t  RX_CHX=0;
+
+    while(len--)
+    {
+        RX_CHX+= *buf;
+        buf++;
+    }
+
+    return RX_CHX&=0xff;
+}
+
+
+
+
