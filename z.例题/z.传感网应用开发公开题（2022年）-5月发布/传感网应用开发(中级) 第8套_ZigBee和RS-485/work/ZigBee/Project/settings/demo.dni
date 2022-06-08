@@ -30,6 +30,7 @@ Count=0
 Stop timers on halt=0
 Leave target running=1
 [Aliases]
-A0=_ "F:\code\RFBASE\CC2530_lib\basicrf\basic_rf.c" ""
-Count=1
+A0=_ "E:\jidonghao\jidonghao_16\z.例题\z.传感网应用开发公开题（2022年）-5月发布\传感网应用开发(中级) 第8套_ZigBee和RS-485\work\ZigBee1\Project\collect.c" ""
+A1=_ "F:\code\RFBASE\CC2530_lib\basicrf\basic_rf.c" ""
+Count=2
 SuppressDialog=0

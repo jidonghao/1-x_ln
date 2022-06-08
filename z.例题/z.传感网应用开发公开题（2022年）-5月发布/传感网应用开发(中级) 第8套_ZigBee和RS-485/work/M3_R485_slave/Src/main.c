@@ -56,6 +56,9 @@
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
+
+
+void riverLight(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -77,26 +80,79 @@ int fputc(int ch, FILE *f)
   return(ch);
 }
 
+void getLight(void){
+	float adcValue,voltage_val;	
+	//启动ADC
+	HAL_ADC_Start(&hadc1);  	
+	//等待采集完成
+	HAL_ADC_PollForConversion(&hadc1,40); 	
+	//获取ADC采集的数据
+	adcValue = HAL_ADC_GetValue(&hadc1);
+	//将采集到的数据转换为电压值(单位:mv)
+	voltage_val = adcValue * 3300 /(4096.0-1);
+	//将电压值转换为光照强度
+	illumination_value=(5/2.0)*(voltage_val/10.0);					//除以10K电阻转换成光电流	
+	//停止ADC
+	HAL_ADC_Stop(&hadc1); 
+}
 
 
+void Send_Illuminance(uint8_t idx)
+{	
+	uint8_t cmd[7] = {0};
+	uint16_t calchkval = 0;
+	cmd[0] = idx;
+	cmd[1] = 0x04;
+	cmd[2] = 0x02;
+	cmd[3] = illumination_value>>8;
+	cmd[4] = illumination_value&0xff;
+	calchkval = mc_check_crc16(cmd,5);
+	cmd[5]=calchkval>>8;	//高字节在前
+  cmd[6]=calchkval&0xFF;			//低字节在后
+	printf("当前光照度为%d\r\n",illumination_value);	
 
+	HAL_GPIO_WritePin(USART2_TX_EN_GPIO_Port,USART2_TX_EN_Pin,GPIO_PIN_SET);	
+	HAL_Delay(1000);
+	HAL_UART_Transmit(&huart2,cmd,7,0xffff);	
+	HAL_GPIO_WritePin(USART2_TX_EN_GPIO_Port,USART2_TX_EN_Pin,GPIO_PIN_RESET);	
+}
 
 void Refresh_Sensor()
 {	
 	/*每隔1s LED9改变亮灭状态，并采集光照度信息;
 	  当光照度低于一定阈值，则打开照明灯，高于相应阈值则关闭照明灯模块 begin*/
+
+getLight(); // 获取光照值
+	if(illumination_value>100){
+		HAL_GPIO_WritePin(CTRL_GPIO_Port,CTRL_Pin,0);
+	}else{
+	HAL_GPIO_WritePin(CTRL_GPIO_Port,CTRL_Pin,1);
+	}
 	
+	printf("光照值为%d\r\n",illumination_value);
 	
-	
-	
-	
-	
+	HAL_GPIO_TogglePin(LED9_GPIO_Port,LED9_Pin);
+	//HAL_Delay(1000);
+
 	
 	/*每隔1s LED9改变亮灭状态，并采集光照度信息;
 	  当光照度低于一定阈值，则打开照明灯，高于相应阈值则关闭照明灯模块 end*/
 }
 
+/*************************
+* 流水灯
+**************************/
+uint16_t lightFlag = 0x80;
 
+void riverLight(void){
+
+	if(lightFlag<=0)
+		lightFlag = 0x80;
+	
+	HAL_GPIO_WritePin(LED1_GPIO_Port,0xff,1);
+	HAL_GPIO_WritePin(LED1_GPIO_Port,lightFlag,0);
+	lightFlag>>=1;
+}
 
 
 
@@ -187,7 +243,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-		
+			
     /* USER CODE BEGIN 3 */
 		if(rxPos==8 && usart2RxCpltFlag == 1)
 		{
@@ -198,8 +254,7 @@ int main(void)
 				if(rxBuf[0]==currAddr)
 				{
 				 /*收到RS-485主机查询本节点传感器指令后，将光照度上报RS-485主机 begin*/
-
-				
+Send_Illuminance(currAddr);
 					
          /*收到RS-485主机查询本节点传感器指令后，将光照度上报RS-485主机 end*/
 					
@@ -207,7 +262,7 @@ int main(void)
 					
 					
 				/*LED流水灯变到下一个状态  begin*/
-					
+						riverLight();
 					
 					
 				/*LED流水灯变到下一个状态  end*/
