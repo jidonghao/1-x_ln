@@ -20,7 +20,7 @@
 
 
 /*点对点通讯地址设置*/
-#define RF_CHANNEL                20         // 频道 11~26  
+#define RF_CHANNEL                16         // 频道 11~26  
 #define PAN_ID                    0x0321     //网络id  
 #define MY_ADDR                   0xC2BD     //本机模块地址
 #define SEND_ADDR                 0xB4F3     //发送地址

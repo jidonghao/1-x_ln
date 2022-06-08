@@ -529,7 +529,7 @@
         </option>
         <option>
           <name>OutputFile</name>
-          <state>$FILE_BNAME$.r51</state>
+          <state></state>
         </option>
         <option>
           <name>ACaseSensitivity</name>
@@ -4149,7 +4149,6 @@
     <file>
       <name>$PROJ_DIR$\collect.c</name>
       <excluded>
-        <configuration>Debug</configuration>
         <configuration>temprh_sensor</configuration>
       </excluded>
     </file>
