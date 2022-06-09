@@ -4153,6 +4153,9 @@
       </excluded>
     </file>
     <file>
+      <name>$PROJ_DIR$\fire_sensor.c</name>
+    </file>
+    <file>
       <name>$PROJ_DIR$\temprh_sensor.c</name>
       <excluded>
         <configuration>collect</configuration>
