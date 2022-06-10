@@ -7,7 +7,7 @@
 
 void LinkServer(void){
 	for(int i = 0; i < 3 ;i++){
-		printf("AT+CIPSTART=\"TCP\",\"ndp.nlecloud.com\",8600\r\n");//连接到云平台 此时设备还未显示在线
+		printf("AT+CIPSTART=\"TCP\",\"120.77.58.34\",8600\r\n");//连接到云平台 此时设备还未显示在线
 		HAL_Delay(1500);
 	}
 	
