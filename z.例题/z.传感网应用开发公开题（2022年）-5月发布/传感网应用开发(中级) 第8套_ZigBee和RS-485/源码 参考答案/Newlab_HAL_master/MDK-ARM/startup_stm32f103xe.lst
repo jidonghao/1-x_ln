@@ -558,11 +558,10 @@ ARM Macro Assembler    Page 9
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
 ork --depend=newlab_hal_slave\startup_stm32f103xe.d -onewlab_hal_slave\startup_
-stm32f103xe.o -IG:\Newlab_HAL_master\MDK-ARM\RTE -ID:\workSoftwareInstallPath\K
-eil_v5\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include -ID:\workSoftwareInstallPath\Ke
-il_v5\Packs\Keil\STM32F1xx_DFP\2.2.0\Device\Include --predefine="__UVISION_VERS
-ION SETA 520" --predefine="_RTE_ SETA 1" --predefine="STM32F10X_HD SETA 1" --li
-st=startup_stm32f103xe.lst startup_stm32f103xe.s
+stm32f103xe.o -I.\RTE\_Newlab_HAL_master -IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\
+CMSIS\Core\Include -IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Includ
+e --predefine="__UVISION_VERSION SETA 525" --predefine="_RTE_ SETA 1" --predefi
+ne="STM32F10X_HD SETA 1" --list=startup_stm32f103xe.lst startup_stm32f103xe.s
 
 
 
